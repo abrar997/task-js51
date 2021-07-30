@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title> task js 5</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- types of font from fontawesome  -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Slab:wght@700&display=swap" rel="stylesheet">  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- fixed side navbar -->
+  <section class="sidenavbar">
+
+  <div class="for" > 
+    <ul>
+      <!-- <li><input type="text" name="" id=""></li> -->
+      <!-- call the function by onclick -->
+ <li class="lili btn" onclick="clicko()"> loop <i class="fas fa-angle-down"></i></li>
+<br>
+ <div class="lis mb-4" style="display:none" id="clickbtn">
+      <li class="lilo"><a class="active" href="#home">for loop</a></li>
+      <li><a href="#news">for/in loop</a></li>
+      <li><a href="#contact">for/of loop</a></li>
+      <li><a href="#about"> Do/while loop</a></li>
+            <li><a href="#about">while loop</a></li>
+</div></ul>
+      </ul>  
+      <ul style="margin-top: 320px ; cursor:pointer">
+        <!-- call the function by onclick -->
+         <li class="lili  mt-4" style="text-align: center;padding:16px"  onclick="func()"> function <i class="fas fa-angle-down"></i></li>
+      </li> <br>
+        <div class="lis mb-4" style="display:none" id="list">
+          <li class="lilo"><a class="active" href="#home">normal</a></li>
+          <li><a href="#news">Expression</a></li>
+          <li><a href="#contact">Annonymes</a></li>
+          <li><a href="#about">while loop</a></li>
+    
+</div> </ul>
+
+        <ul style="margin-top: 620px ; cursor:pointer">
+          <!-- call the function by onclick -->
+          <li class="lili  mt-4" style="text-align: center;padding:16px" onclick="hoist()"> Hoisting <i  class="fas fa-angle-down"></i></li>
+          </li> <br>
+          <div class="lis mb-4" style="display:none" id="Hoisting">
+            <li class="lilo"><a class="active" href="#home">Variables </a></li>
+          <li><a href="#news">Functions</a></li>
+  
+  </div> 
+</ul></div>
+</section>
+
+<!-- <section><div class="container"><div class="row"><h1>expalain contents in java script</h1>
+</div></div></section> -->
+
+<!-- --------------- -->
+<section class="navbartop">
+
+<!--Navbar-->
+<nav class="navbar navbar-dark ">
+  <h3 class="mr-auto">loop & function</h3>
+  <form class="form-inline my-2 my-lg-0 ml-auto">
+    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
+  </form>
+</nav>
+<!--/.Navbar-->
+
+</section>
+
+
+<!-- ------------ -->
+<!-- explain loop with examples and syntax  -->
+<section class="loop">
+  <div class="container">
+    <div class="row">
+      <!-- <h2><span>loop</span>شرح وتوضيح 
+      </h2> -->
+<div class="tab  col-lg-4">
+  <button class=" tablinks" onclick="openLoop(event, 'forloops','syntaxfor')"> for loop</button>
+  <button class=" tablinks" onclick="openLoop(event, 'forIn','syntaxin')"> for/in</button>
+  <button class=" tablinks" onclick="openLoop(event, 'forOf','syntaxof')"> for/of</button>
+  <button class=" tablinks" onclick="openLoop(event, 'doWhile','syntaxdo')">Do/while </button>
+  <button class=" tablinks" onclick="openLoop(event, 'while','syntaxwhile')">While</button>
+</div>
+
+<div class="expalin col-lg-8" style="position: absolute;
+left:15%;
+top:370px;
+box-shadow: 2px 3px 5px  grey;
+width: 350px;
+background-color: teal;">
+<div id="forloops" class="tabcontent"  >
+  <h4>for loop</h4>
+  <p> إختصار  لتكرار أكشن معين لمجموعة عناصر ب دالة واحدة <br> يمكن استخدامها عدة مرات وبأوقات مختلفة دون النطر إلى الشروط  وتعتبر الأكثر إستخداماً </p>
+</div>
+
+<div id="forIn" class="tabcontent" >
+  <h4>for/in</h4>
+  <p>تكرار شيء من شيء <br>تستخدم مع  object <br> لا يفضل استخدامها بكثرة ويمكن استبدالها ب  <br>(.forEach)</p>
+</div>
+
+<div id="forOf" class="tabcontent" >
+  <h4>for/of</h4>
+  <p>تكرار شي من شيء <br>تستخدم مع array, string, map ,NodeLists  <br>لاتستخدم مع object  
+  </p>
+</div>
+<div id="doWhile" class="tabcontent">
+  <h4>do/while</h4>
+  <p>ينفذ الكود ثم يتحقق من الشرط اذا كان الشرط صحيح فإته يكرر الاكشن ولا يتوقف عن التتكرار مادام الشرط صحيح  </p>
+</div>
+<div id="while" class="tabcontent">
+  <h4>while</h4>
+  <p> 
+    ينفذ التكرار فقط في حالة كون الشرط صحيح <br>
+    يعطي نفس النتيجة التي تعطيها for loop اذا كان الشرط صحيح </p>
+
+</div>
+</div>
+
+<!-- --------------yarab  -->
+<!-- ne2w box for syntax and example -->
+<div class="expalin22 col-lg-8" style="position: absolute;
+left:37%;
+top:370px;
+box-shadow: 2px 3px 5px  grey;
+width: 370px;
+background-color: teal;">
+  <div id="syntaxfor" class="tabcontent">
+    <h4>for loop syntax </h4>
+    <p>for (statement 1; statement 2; statement 3) {
+    // code block to be executed
+    }</p>
+    <hr >
+    <h4>Example </h4>
+<p>for (var i = 0; i < 5; i++){ text +="The number is " + i + "<br>" ; }</p>
+        <div class="btn">جرب الان</div>
+
+  </div>
+
+  <div id="syntaxin" class="tabcontent">
+    <h4>for loop syntax </h4>
+    <p>for (key in object) {
+    // code block to be executed
+    }</p>
+    <hr>
+    <h4>Example</h4>
+      <p>var person = {fname:"John", lname:"Doe", age:25};
+      <br>
+      var txt = "";
+      <br>
+      for (let x in person) {
+      txt += person[x] + " ";
+      }
+      
+      document.getElementById("demo").innerHTML = txt;
+</p>
+        <div class="btn">جرب الان</div>
+
+  </div>
+
+  <div id="syntaxof" class="tabcontent">
+    <h4>for/of syntaxdo</h4>
+    <p>for (variable of iterable) {
+    // code block to be executed
+    }</p>
+    <hr>
+    <h4>Example</h4>
+    <p>var cars = ["BMW", "Volvo", "Mini"];
+    var text = "";
+        <br>
+
+    for (let x of cars) {
+    text += x + "<br>";
+    }
+    
+     document.getElementById("demo").innerHTML = text;</p>
+        <div class="btn">جرب الان</div>
+
+  </div>
+  <div id="syntaxdo" class="tabcontent">
+    <h4>do/while syntax</h4>
+    <p>do {
+    // code block to be executed
+    }
+    while (condition);</p>
+    <hr>
+<h4>example</h4>
+<p>var text = ""
+  var i = 0;
+<br>
+  do {
+  text += "<br>The number is " + i;
+ 
+  i++;
+  }
+
+  while (i < 10);
+
+  document.getElementById("demo").innerHTML=text;</p>
+        <div class="btn">جرب الان</div>
+
+  </div>
+  <div id="syntaxwhile" class="tabcontent">
+    <h4>while syntax</h4>
+    <p>while (condition) {
+    // code block to be executed
+    }</p> 
+    <hr>
+    <h4>example</h4>
+    <p>var text = "";
+      var i = 0;
+      <br>
+      while (i < 10) {
+         text +="
+         The number is " + i; i++; 
+        } 
+
+      document.getElementById("demo").innerHTML=text;
+    </p>
+        <div class="btn">جرب الان</div>
+  </div>
+</div>
+
+</div></div>
+</section>
+
+<!-- ----------------------- -->
+
+<!-- create tabs to define functions -->
+
+<section class="function">
+  <div class="container">
+    <div class="row">
+
+<div class="buttons">
+<button class="funLinks" onclick="funcs(event,'declare','syntaxDeclare')">Declare Function </button>
+<button class="funLinks" onclick="funcs(event,'expression','syntaxExpree')">Expression Function</button>
+<button class="funLinks" onclick="funcs(event,'Construc','syntaxconsrt')"> Function ()constructor </button>
+<button class="funLinks" onclick="funcs(event,'self-invoking','syntaxSelf')">Self invoking Function</button>
+<button class="funLinks" onclick="funcs(event,'Anonymes','syntaxNormal')">Anonymes Function</button>
+
+
+</div>
+<div class="functdefin col-lg-8" style="position: absolute;
+left:61%;
+top:380px;
+box-shadow: 2px 3px 5px  grey;
+width:290px;
+background-color: #f1f1f1;">
+  <div id="declare" class="funcontent"
+  >
+    <h4>Declare Function </h4>
+    <p>  دالة تعرف كخطوة أولى ثم تستخدم لاحقاً  </p>
+  </div>
+
+  <div id="expression" class="funcontent">
+    <h4>Expression Function </h4>
+<p>دالة تعرف من خلال متغير وتخزن داخل var <br>
+عادة تكون بدون اسم فتسمى anonymous function
+
+</p>
+
+</div>
+
+  <div id="Construc" class="funcontent">
+    <h4> Function() Constructors</h4>
+    <p> دالة تخزن داخل اسم خاص بها مثل myFunction
+    </p>
+  </div>
+
+
+  <div id="self-invoking" class="funcontent">
+    <h4>self invoking function </h4>
+<p>دالة تستدعي نفسها من خلال حصرها بقوسين ()</p>
+  </div>
+
+
+<div id="Anonymes" class="funcontent">
+  <h4>Anonymes Function </h4>
+  <p> دالة لا تحتوي على اسم تغرف نفسها ب function() مباشرة 
+    </p>
+</div>
+
+
+
+</div>
+
+<!-- --------------yarab  -->
+<!-- ne2w box for syntax and example -->
+<div class="funcsyn col-lg-8" style="position: absolute;
+left:80%;
+top:370px;
+box-shadow: 2px 3px 5px  grey;
+width: 320px;
+background-color:#f1f1f1">
+  <div id="syntaxDeclare" class="funcontent">
+    <h4>Declare Function syntax </h4>
+    <p>function functionName(parameters) {
+    // code to be executed
+    }</p>
+    <hr>
+    <h4>Example </h4>
+    <p>var x = myFunction(4, 3);
+    document.getElementById("demo").innerHTML = x;
+    
+    function myFunction(a, b) {
+    return a * b;
+    }
+  </p>
+        <div class="btn">جرب الان</div>
+
+  </div>
+
+  <div id="syntaxExpree" class="funcontent">
+    <h4>Expression Function syntax </h4>
+    <p>var x = function (a, b) {return a * b};
+</p>
+    <hr>
+    <h4>Example</h4>
+    <p>var x = function (a, b) {return a * b};
+    document.getElementById("demo").innerHTML = x(4, 3);
+    </p>
+    <div class="btn">جرب الان</div>
+
+  </div>
+
+
+  <!-- --------- -->
+
+  <div id="syntaxconsrt" class="funcontent">
+    <h4>Function()constructor </h4>
+    <p>var myFunction = new Function("a", "b", "return a * b");
+</p>
+    <hr>
+    <h4>Example</h4>
+    <p>var myFunction = function (a, b) {return a * b}
+    document.getElementById("demo").innerHTML = 
+     myFunction(4, 3);
+    </p>
+    <div class="btn">جرب الان</div>
+
+  </div>
+
+  <div id="syntaxSelf" class="funcontent">
+    <h4>Self invoking Function</h4>
+    <p>(function () {
+     var x = "Hello!!"; // I will invoke myself
+      })()</p>
+      <div class="btn">جرب الان</div>
+
+  </div>
+
+  <div id="syntaxSelf" class="funcontent">
+    <h4>while syntax</h4>
+    <p>while (condition) {
+      // code block to be executed
+      }</p>
+    <hr>
+    <h4>example</h4>
+    <p>var text = "";
+      var i = 0;
+      <br>
+      while (i < 10) { text +="
+         The number is " + i; i++; } document.getElementById("demo").innerHTML=text; </p>
+        <div class="btn">جرب الان</div>
+
+</div>
+
+</div></div>
+</section>
+
+
+<!-- --------------- -->
+
+
+<!-- hoisting section -->
+
+<section class="hoisting">
+<div class="contaner">
+<div class="row">
+
+<button class="accordion">Variable Hoisting</button>
+<div class="panel">
+  <p> طريقة لتعريف المتغيرات التي لا تحتوي على قيم
+  <br>
+    Declare variables with Hoisted <br>
+
+x = 5; // Assign 5 to x
+<br>
+elem = document.getElementById("demo"); 
+// Find an element <br>
+elem.innerHTML = x;
+ // Display x in the element
+<br>
+var x; // Declare x
+
+  </p>
+</div>
+
+<button class="accordion">Function Hoisting </button>
+<div class="panel">
+  <p> تعرف الدالة قبل كتابتها 
+<br>
+myFunction(5);
+<br>
+function myFunction(y) {
+return y * y;
+}
+
+
+  </p>
+</div>
+
+</div></div>
+
+</section>
+
+<p id="demo"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript">
+    var a = document.getElementById('disc-50');
+    a.onclick = function () {
+      Clipboard_CopyTo("T9TTVSQB");
+      var div = document.getElementById('code-success');
+      div.style.display = 'block';
+      setTimeout(function () {
+        document.getElementById('code-success').style.display = 'none';
+      }, 900);
+    };
+
+    function Clipboard_CopyTo(value) {
+      var tempInput = document.createElement("input");
+      tempInput.value = value;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+    }
+  </script>
+
+  <script src="js/anime.js"></script>
+
+</body>
+
+</html>
